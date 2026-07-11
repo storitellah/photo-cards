@@ -25,6 +25,7 @@ export default function App() {
   const [template, setTemplate] = useState("classic");
   const [photo, setPhoto] = useState<File | null>(null);
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
+  const [fileInputKey, setFileInputKey] = useState(0);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -68,6 +69,7 @@ export default function App() {
       setMessage("");
       setTemplate("classic");
       onPhotoChange(null);
+      setFileInputKey((k) => k + 1);
       refreshCards();
     } catch (e: unknown) {
       setError(e instanceof Error ? e.message : "Failed to create card");
@@ -148,6 +150,7 @@ export default function App() {
             <label className="field">
               <span>Photo</span>
               <input
+                key={fileInputKey}
                 type="file"
                 accept="image/*"
                 onChange={(e) => onPhotoChange(e.target.files?.[0] ?? null)}
