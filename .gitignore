@@ -5,6 +5,7 @@ node_modules/
 # Build output
 dist/
 build/
+*.tsbuildinfo
 
 # Runtime data (server persistence + uploaded images)
 server/data/
