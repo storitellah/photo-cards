@@ -1,14 +1,18 @@
-# photo-cards
+# PhotoCards by Storitellah
 
-Create, customize, and collect personalized photo cards. A full-stack starter
+Create, customize, and collect personalized photo cards. A full-stack app
 built with a **Vite + React + TypeScript** client and an **Express + TypeScript**
-API, managed as pnpm workspaces.
+API, managed as pnpm workspaces. Made by [Storitellah](https://storitellah.com).
 
 ## Features
 
 - Create a photo card with a title, recipient, message, template, and photo upload.
 - Browse a gallery of saved cards and delete them.
 - Cards persist to disk (`server/data/cards.json`); uploads are stored in `server/uploads/`.
+- Mobile-optimized, responsive layout (PC, iOS, Android) with touch-friendly controls.
+- Live local date/time clock based on the visitor's timezone.
+- SVG favicon and PWA-friendly meta tags, ready for deployment (e.g. Cloudflare).
+- Creator support links: [Patreon](https://patreon.com/kiberastories), [Ko-fi](https://ko-fi.com/kiberastories), and M-Pesa (+254 711 254986).
 
 ## Prerequisites
 
