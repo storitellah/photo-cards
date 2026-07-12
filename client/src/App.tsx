@@ -6,6 +6,8 @@ import {
   fetchTemplates,
   type PhotoCard,
 } from "./api";
+import Clock from "./Clock";
+import Footer from "./Footer";
 import "./App.css";
 
 const FALLBACK_TEMPLATES = [
@@ -95,8 +97,21 @@ export default function App() {
   return (
     <div className="app">
       <header className="app__header">
-        <h1>Photo Cards</h1>
+        <h1 className="app__title">
+          PhotoCards{" "}
+          <span className="app__by">
+            by{" "}
+            <a
+              href="https://storitellah.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Storitellah
+            </a>
+          </span>
+        </h1>
         <p>Create, customize, and collect personalized photo cards.</p>
+        <Clock />
       </header>
 
       <main className="layout">
@@ -219,6 +234,8 @@ export default function App() {
           )}
         </section>
       </main>
+
+      <Footer />
     </div>
   );
 }
